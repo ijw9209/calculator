@@ -1,3 +1,33 @@
+# myside Project Calculator
+
+## 적금 및 예금 계산기 프로젝트
+
+Next.js + ReduxToolkit + Typescript 설정
+
+dependency
+
+```bash
+npx create-next-app
+
+```
+
+```bash
+npm i @reduxjs/toolkit
+npm i react-redux @types/react-redux
+npm i next-redux-wrapper
+
+```
+
+참고 사이트
+
++ [https://cotak.tistory.com/164](https://cotak.tistory.com/164)
++ [https://curryyou.tistory.com/501](https://curryyou.tistory.com/501)
++ [https://github.com/vercel/next.js/tree/canary/examples/with-redux](https://github.com/vercel/next.js/tree/canary/examples/with-redux)
+
+
+
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
@@ -32,3 +62,6 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+
+

@@ -25,6 +25,11 @@ npm i next-redux-wrapper
 + [https://github.com/vercel/next.js/tree/canary/examples/with-redux](https://github.com/vercel/next.js/tree/canary/examples/with-redux)
 
 
+적용해야됨
+
++ [https://github.com/kirill-konshin/next-redux-wrapper#motivation](https://github.com/kirill-konshin/next-redux-wrapper#motivation)
+
+
 
 
 

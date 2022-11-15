@@ -1,6 +1,9 @@
 import { configureStore } from '@reduxjs/toolkit'
 import counterReducer from '../features/counter/counterSlice'
 
+//next-redux-wrapper 추가
+import {createWrapper,  HYDRATE} from 'next-redux-wrapper';
+
 
 export const store = configureStore({
   reducer: {

@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-import {Counter } from '../features/counter/Counter'
+import { Counter } from '../features/counter/Counter'
 import type { NextPage, InferGetServerSidePropsType , GetServerSideProps} from 'next';
 import { decrement, increment } from '../features/counter/counterSlice';
 import wrapper from '../app/store';

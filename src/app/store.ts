@@ -3,7 +3,7 @@ import counterReducer, {CounterState} from '../features/counter/counterSlice'
 
 import { combineReducers } from '@reduxjs/toolkit';
 //next-redux-wrapper 추가
-import {createWrapper, Context, HYDRATE} from 'next-redux-wrapper';
+import {createWrapper, HYDRATE} from 'next-redux-wrapper';
 
 interface ReducerStates {
     counter : CounterState;
@@ -24,7 +24,6 @@ const rootReducer = (state: ReducerStates, action: AnyAction): CombinedState<Red
       default: {
         const combinedReducer = combineReducers({
           counter: counterReducer,
-          // [couterSlice.name]: couterSlice.reducer,
           // [numberSlice.name]: numberSlice.reducer
         });
         return combinedReducer(state, action);
@@ -47,14 +46,6 @@ const makeStore = () => {
   return store;
 };
 
-
-// export const store = configureStore({
-//   reducer: {
-//     counter: counterReducer,
-//   },
-// })
-
-
 export type AppStore = ReturnType<typeof makeStore>; // store 타입
 // Infer the `RootState` and `AppDispatch` types from the store itself
 export type RootState = ReturnType<typeof rootReducer>
@@ -66,6 +57,6 @@ const wrapper = createWrapper<AppStore>(makeStore, {
     debug: process.env.NODE_ENV === 'development'
   });
   
-  // wrapper 익스포트
-  export default wrapper;
+// wrapper 익스포트
+export default wrapper;
    

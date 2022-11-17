@@ -2,9 +2,12 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import {Counter } from '../features/counter/Counter'
+import type { NextPage, InferGetServerSidePropsType , GetServerSideProps} from 'next';
+import { decrement, increment } from '../features/counter/counterSlice';
+import wrapper from '../app/store';
 
 
-export default function Home() {
+const Home: NextPage = (props: InferGetServerSidePropsType<typeof getServerSideProps>) => {
   return (
     <div className={styles.container}>
       <Head>
@@ -73,3 +76,16 @@ export default function Home() {
     </div>
   )
 }
+
+// SSR: 서버에서 구동되는 영역
+export const getServerSideProps: GetServerSideProps = wrapper.getServerSideProps((store) => async (context) => {
+
+  // 서버 영역에서 Redux 사용
+  store.dispatch(increment());
+  store.dispatch(decrement());
+
+  return { props: { message: 'Message from SSR'} };
+});
+
+
+export default Home;

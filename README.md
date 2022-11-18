@@ -1,6 +1,4 @@
-# myside Project Calculator
-
-## 적금 및 예금 계산기 프로젝트
+# Next.js + ReduxToolkit + Typescript 설정 example
 
 Next.js + ReduxToolkit + Typescript 설정
 
